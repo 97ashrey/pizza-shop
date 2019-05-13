@@ -1,0 +1,17 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="client.IndexController"
+      fx:id="layout"
+      alignment="CENTER"
+      spacing="10">
+    <padding><Insets right="25" left="25"/></padding>
+    <fx:include source="components/pricingtable/pricing-table.fxml"/>
+    <fx:include fx:id="pizzaControls" source="components/pizzacontrolls/pizza-controlls.fxml"/>
+    <fx:include fx:id="userInfo" source="components/userinfocontrolls/user-info-controlls.fxml"/>
+    <Button text="Order"
+            prefWidth="Infinity"
+            fx:id="orderButton"/>
+
+</VBox>

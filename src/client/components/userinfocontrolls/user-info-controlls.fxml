@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import client.components.gridwrapper.GridWrapper?>
+<?import javafx.scene.control.*?>
+<?import client.components.gridwrapper.GridWrapper?>
+<?import javafx.scene.layout.*?>
+
+<GridWrapper xmlns="http://javafx.com/javafx"
+             xmlns:fx="http://javafx.com/fxml"
+             fx:id="layout"
+             fx:controller="client.components.userinfocontrolls.UserInfoController">
+    <Label
+            text="Payment method:"
+            GridPane.rowIndex="0"
+            GridPane.columnIndex="0"
+            maxWidth="Infinity"/>
+    <ChoiceBox GridPane.rowIndex="0"
+               GridPane.columnIndex="1"
+               fx:id="paymentMethod"/>
+
+    <Label
+            text="Address:"
+            GridPane.rowIndex="1"
+            GridPane.columnIndex="0"
+            maxWidth="Infinity"/>
+
+    <Label
+            text="Phone:"
+            GridPane.rowIndex="2"
+            GridPane.columnIndex="0"
+            maxWidth="Infinity"/>
+
+    <Label
+            text="Message:"
+            GridPane.rowIndex="3"
+            GridPane.columnIndex="0"
+            maxWidth="Infinity"/>
+</GridWrapper>

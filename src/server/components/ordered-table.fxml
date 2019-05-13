@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import server.components.OrderColumn?>
+
+<?import javafx.scene.layout.VBox?>
+<?import server.components.PercentageColumn?>
+<?import components.Title?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="server.components.OrderTableController"
+      spacing="10">
+    <Title title="Undelivered orders"/>
+    <TableView  styleClass="table"
+                fx:id="table"
+                maxWidth="Infinity"
+                maxHeight="Infinity">
+        <columns>
+            <PercentageColumn text="ID" percentageWidth="0.1">
+                <cellValueFactory><PropertyValueFactory property="id"/>
+                </cellValueFactory>
+            </PercentageColumn>
+            <OrderColumn text="Order" percentageWidth="0.35">
+            </OrderColumn>
+            <PercentageColumn text="Message" percentageWidth="0.35">
+                <cellValueFactory><PropertyValueFactory property="message" />
+                </cellValueFactory>
+            </PercentageColumn>
+            <PercentageColumn text="Time to cook" percentageWidth="0.2">
+                <cellValueFactory><PropertyValueFactory property="time" />
+                </cellValueFactory>
+            </PercentageColumn>
+        </columns>
+
+    </TableView>
+</VBox>

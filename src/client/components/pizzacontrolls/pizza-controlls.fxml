@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import client.components.gridwrapper.GridWrapper?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.collections.FXCollections?>
+<GridWrapper xmlns="http://javafx.com/javafx"
+             xmlns:fx="http://javafx.com/fxml"
+             fx:controller="client.components.pizzacontrolls.PizzaController">
+        <Label  text="Pizza type:"
+                GridPane.rowIndex="0"
+                GridPane.columnIndex="0"
+                maxWidth="Infinity"/>
+        <ChoiceBox GridPane.rowIndex="0"
+                   GridPane.columnIndex="1"
+                   fx:id="pizzaType" />
+
+        <Label text="Pizza size:"
+               GridPane.rowIndex="1"
+               GridPane.columnIndex="0"
+               maxWidth="Infinity"/>
+        <ChoiceBox value="25"
+                   GridPane.rowIndex="1"
+                   GridPane.columnIndex="1"
+                   fx:id="pizzaSize">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="25" />
+                    <String fx:value="32" />
+                    <String fx:value="50" />
+                </FXCollections>
+            </items>
+        </ChoiceBox>
+
+        <Label
+                text="Additives:"
+                GridPane.rowIndex="2"
+                GridPane.columnIndex="0"
+                maxWidth="Infinity"/>
+
+        <FlowPane GridPane.rowIndex="2"
+                  GridPane.columnIndex="1"
+                  hgap="5" vgap="5"
+                  fx:id="checkBoxContainer">
+
+        </FlowPane>
+</GridWrapper>
+

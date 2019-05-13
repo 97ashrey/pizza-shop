@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import server.components.OrderColumn?>
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import server.components.PercentageColumn?>
+<?import components.Title?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="server.components.OrderTableController"
+      spacing="10">
+    <!--<HBox alignment="CENTER"><Label styleClass="messageLabel" text="Delivered orders"></Label></HBox>-->
+    <Title title="Delivered orders"/>
+    <TableView styleClass="table"
+               fx:id="table"
+               maxWidth="Infinity"
+               maxHeight="Infinity">
+        <columns>
+            <PercentageColumn text="ID" percentageWidth="0.1">
+                <cellValueFactory><PropertyValueFactory property="id"/>
+                </cellValueFactory>
+            </PercentageColumn>
+            <OrderColumn text="Order" percentageWidth="0.45"/>
+            <PercentageColumn text="Address" percentageWidth="0.45">
+                <cellValueFactory><PropertyValueFactory property="address"/>
+                </cellValueFactory>
+            </PercentageColumn>
+        </columns>
+    </TableView>
+</VBox>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import components.Title?>
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="client.components.pricingtable.PricingTableController"
+          fx:id="layout"
+          vgap="10"
+          hgap="10"
+            >
+    <columnConstraints>
+        <ColumnConstraints percentWidth="25"/>
+        <ColumnConstraints percentWidth="25"/>
+        <ColumnConstraints percentWidth="25"/>
+        <ColumnConstraints percentWidth="25"/>
+    </columnConstraints>
+    <Title title="Pricing table"
+           GridPane.rowIndex="0"
+           GridPane.columnIndex="0"
+           GridPane.columnSpan="4"/>
+    <Label text=""
+            GridPane.rowIndex="1"
+            GridPane.columnIndex="0"/>
+
+    <Label text="Size 25"
+           GridPane.rowIndex="1"
+           GridPane.columnIndex="1"/>
+
+    <Label text="Size 32"
+           GridPane.rowIndex="1"
+           GridPane.columnIndex="2"/>
+
+    <Label text="Size 50"
+           GridPane.rowIndex="1"
+           GridPane.columnIndex="3"/>
+</GridPane>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.Button?>
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="server.IndexController"
+          hgap="10"
+          >
+    <padding><Insets right="10" top="10" bottom="10" left="10"/></padding>
+    <columnConstraints>
+        <ColumnConstraints percentWidth="50"/>
+        <ColumnConstraints percentWidth="50"/>
+    </columnConstraints>
+    <!--TABLE1-->
+    <fx:include GridPane.columnIndex="0"
+                GridPane.rowIndex="0"
+                fx:id="orderedTable"
+                source="components/ordered-table.fxml"/>
+    <!--TABLE2-->
+    <fx:include GridPane.columnIndex="1"
+                GridPane.rowIndex="0"
+                fx:id="deliveredTable"
+                source="components/delivered-table.fxml"/>
+</GridPane>
